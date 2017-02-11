@@ -32,7 +32,7 @@ public class Stopwatch {
 	 * does nothing when stopwatch is already running. 
 	 */
 	public void start() {
-		if (this.running == false) {
+		if (!this.running) {
 			this.startTime = System.nanoTime();
 			this.running = true;
 		}
@@ -68,10 +68,7 @@ public class Stopwatch {
 	 * return false if the stopwatch is stopped.
 	 */
 	public boolean isRunning() {
-		if (this.running) {
-			return true;
-		} else 
-			return false;
+		return this.running;
 	}
 	
 }
